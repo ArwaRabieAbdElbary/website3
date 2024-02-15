@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   height: 5000px;
+}
+a.active{
+    color: green;
+}
+nav img{
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.navbar-brand{
+    color: green;
+    font-weight: bold;
+    margin-right: 20px; 
+}
+.navbar-brand span{
+    margin-left: 20px;
+    color: gray;
+
+}
+.navbar a:hover{
+    color: green;
+}
+.carousel-item{
+    position: relative;
+}
+.carousel-item img{
+    height: 750px;
+}
+.carousel-caption{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.carousel-caption h2{
+    font-size: 45px;   
+}
+.carousel-caption .btn{
+    background-color: green;
+    color: white;
+    padding:10px 30px; 
+    border-radius: 20px;
+}
+.carousel-caption .btn:hover{
+    background-color:rgb(32, 119, 32);
+}
+.social{
+    position: absolute;
+    top: 35%;
+    right: 10px;
+}
+.social i{
+    display: block;
+    font-size: 60px;
+    margin-bottom: 5px;
+    color: aliceblue;
+}
+.social i:hover{
+    color: green;
+}
+.welcome{
+    background-color: rgb(111, 145, 111);
+    padding: 15PX;
+}
+.welcome button{
+    background-color: white;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    padding:10px 10px; 
+}
+.questions{
+    margin-top: 20px;
+    background-color:  rgb(111, 145, 111);
+    text-align: center;
+    padding: 50px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+.accordion{
+    margin-top: 20px;
+}
+.translate{
+    margin-top: 20px;
+    background-color:  rgb(111, 145, 111);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+.translate-sec{
+    background-color: rgb(210, 210, 210);
+    padding: 15PX;
+}
+.translate-sec span{
+    color: green;
+}
+.img-sec{
+    margin-top: 20px;
+    background-image: url('../images/c4.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    height: 500px;
+    position: relative;
+
+}
+.con-img{
+    position: absolute;
+    background-color: grey;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+}
+.cards{
+    overflow: auto;
+    margin: auto;
+
+   
+}
+.card{
+    float: left;
+    margin:50px 0 50px 100px;
+
+}
