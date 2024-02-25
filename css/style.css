@@ -3,25 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-   height: 5000px;
+
+.two-sec{
+    height: 100vh;
 }
-a.active{
+.nav-item .act{
     color: green;
 }
 nav img{
     border-radius: 50%;
     margin-right: 15px;
 }
+.navbar-brand span{
+    margin-left: 20px;
+    color: gray;
+}
 .navbar-brand{
     color: green;
     font-weight: bold;
     margin-right: 20px; 
 }
-.navbar-brand span{
-    margin-left: 20px;
-    color: gray;
-
+.navbar-brand:hover{
+    color: green;
 }
 .navbar a:hover{
     color: green;
@@ -34,6 +37,7 @@ nav img{
 }
 .carousel-caption{
     position: absolute;
+    z-index: 5;
     top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -52,39 +56,76 @@ nav img{
 }
 .social{
     position: absolute;
-    top: 35%;
+    top: 30%;
     right: 10px;
+    position: fixed;
+    z-index: 10;
 }
-.social i{
+.social a{
     display: block;
     font-size: 60px;
-    margin-bottom: 5px;
-    color: aliceblue;
-}
-.social i:hover{
     color: green;
 }
-.welcome{
-    background-color: rgb(111, 145, 111);
-    padding: 15PX;
+.social a:hover{
+    color: #5fcf80;
 }
-.welcome button{
-    background-color: white;
-    color: green;
+.card-welcome{
+    width: 100%;
+    padding:20px ;
+    background-color: #748e7c;
+}
+.welcome h2{
+    text-shadow: 5px 5px 4px green;
+}
+.welcome p{
+    color: antiquewhite;
     font-size: 20px;
+}
+.welcome-btn{
+    background-color:green;
+    color: white;
+    font-size: 17px;
     font-weight: bold;
-    padding:10px 10px; 
+    padding:8px 20px; 
+    border-radius: 30px;
+    border: 1px solid green;
+}
+.welcome-btn:hover{
+    background-color:rgb(32, 119, 32);
 }
 .questions{
-    margin-top: 20px;
+    background-color:  rgb(169, 198, 169);
+    background-color: #748e7c;
     background-color:  rgb(111, 145, 111);
+    color: white;
     text-align: center;
     padding: 50px 0;
     font-size: 30px;
     font-weight: bold;
+    text-transform: capitalize;
 }
 .accordion{
     margin-top: 20px;
+}
+.accordion-header button {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: white;
+}
+.accordion-header button:focus {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: white;
+}
+.accordion-body{
+    color: rgb(72, 72, 72);
+    background-color: rgb(242, 242, 229);
 }
 .translate{
     margin-top: 20px;
@@ -93,17 +134,16 @@ nav img{
     padding: 20px 0;
     font-size: 30px;
     font-weight: bold;
-}
-.translate-sec{
-    background-color: rgb(210, 210, 210);
-    padding: 15PX;
+    color: white;
+    text-transform:capitalize ;
+    border-radius: 12px;
 }
 .translate-sec span{
     color: green;
 }
 .img-sec{
     margin-top: 20px;
-    background-image: url('../images/c4.jpg');
+    background-image: url('../images/img.jpg');
     background-position: center;
     background-attachment: fixed;
     height: 500px;
@@ -117,17 +157,230 @@ nav img{
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 30px;
-    font-size: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-transform: capitalize;
+    border-radius: 12px 12px 0 0;
 }
-.cards{
-    overflow: auto;
+.destinations{
+    margin-top: 20px;
+    text-align: center;
+}
+.item{
+    margin-bottom: 20px; 
+}
+.destinations .card{
+    margin:0 auto;
+    width: 80%;
+    position: relative;
+}
+.destinations .card::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: rgb(168, 176, 168);
+    transition: 1s ;
+}
+.destinations .card:hover::after{
+    opacity: 0.2;
+    height: 100%;
+    width: 100%
+}
+.destinations .card::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: rgb(168, 176, 168);
+    transition: 1s;
+}
+.destinations .card:hover::before{
+    opacity: 0.2;
+    height: 100%;
+    width: 100%
+}
+.cover-img{
+    margin-top: 20px;
+    height: 400px;
+    background-image: url('../images/p3.jpg');
+    background-attachment: fixed;
+    background-position: center;
+}
+.team{
+    margin: 60px 0 ;
+}
+.team-con{
+    text-align: center;
+}
+.team-con hr ,.services hr{
+    margin:10px auto;
+    color: green;
+    height: 10%;
+}
+.item-team{
+    margin-top: 40px;
+}
+.team-img{
+    background-image: url(../images/guide-1.jpg);
+    width: 300px;
+    height: 350px;
+    background-repeat: no-repeat;
     margin: auto;
-
-   
+    position: relative;
+    border-radius: 20px;
+    transition: 2s;
 }
-.card{
-    float: left;
-    margin:50px 0 50px 100px;
+.t-two{
+    background-image: url(../images/guide-4.jpg);
+}
+.t-three{
+    background-image: url(../images/guide-3.jpg);
+}
+.t-four{
+    background-image: url(../images/guide-2.jpg);
+}
+.team-img .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+}
+.Team-con-top{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: white;
+}
+.Team-con-bottom{
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    color: white
+}
+.Team-con-bottom img{
+    border-radius: 50%;
+    border: 5px solid green;
+}
+.team-img:hover{
+    transform: scale(0.9);
 
+}
+.team-img:hover .overlay{
+   background-color: rgba(0, 0, 0, 0.5);
+}
+.services{
+    margin-top: 100px;
+}
+.services h2{
+    text-align: center;
+}
+.services .card{
+    margin: 30px auto;
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px grey;
+}
+.services .card .one-img ,.three-img{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 22% 100%);
+}
+.services .card img:hover{
+    transform: scale(1.);
+}
+.services .card-body{
+    padding: 50px 30px;
+}
+.services .card-text{
+    padding-top: 20px;
+    font-size: 19px;
+}
+.services button{
+    color: black;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #7b9382;
+}
+.services button:hover{
+    background-color: #94a398;
+}
+.services .card .two-img{
+    clip-path: polygon(0 0, 100% 0%, 76% 100%, 0 100%);
+}
+.join{
+    margin-top: 100px;
+}
+.join h2{
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+.join-item{
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    width: 90%;
+    height: 150px;
+    font-size: 50px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px grey;
+}
+.join-item h6{
+    color: rgb(63, 63, 63);
+    font-size: 25px;
+}
+.join-item i{
+    color: green;
+    font-size: 40px;
+}
+.join-item i:hover{
+    color: rgb(66, 113, 66);
+}
+.footer{
+    margin-top: 100px;
+    background-color: #fafafa;
+    line-height: 1.5;
+}
+.footer img{
+    border-radius: 50%;
+}
+.footer-item{
+    margin: auto;
+}
+.footer hr{
+    width: 100%;
+}
+.footer span{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.footer i{
+    margin-right: 5px;
+    line-height: 2;
+}
+.footer p{
+    text-align: center;
+    font-size: 25px;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+}
+.footer a:hover{
+    text-decoration: underline;
+    color: rgb(82, 81, 81);
+}
+.footer h5{
+    text-align: center;
+    color: gray;
+}
+.footer .last{
+    margin-bottom: 0;
 }
